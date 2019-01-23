@@ -156,21 +156,30 @@ img {
 
 /* slides Background */
 
-.slide:after {
+.slide img {
 	display: block;
 	content: "";
 	z-index: -1;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.trinus:after {
+.slide img.contain {
+  object-fit: contain;
+}
+
+.slide img.cover {
+  object-fit: cover;
+}
+
+/* .trinus {
 	background: url("../_img/trinus (1).png") center center no-repeat;
 }
-.penguin:after {
+.penguin {
 	background: url("../_img/penguin (1).jpg") no-repeat;
 	background-size: 100% 100%;
-}
+} */
