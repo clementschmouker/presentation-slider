@@ -18,7 +18,8 @@ document.addEventListener("keyup", function(e) {
 		slideIndex += 1;
 		slides[slideIndex].classList.add("active-slide");
 		slides[slideIndex].classList.remove("next-slide");
-	}
+  }
+  // Go to previous slide
 	if(e.key == "ArrowUp" && slideIndex > 0) {
 		slides[slideIndex].classList.add("next-slide");
 		slides[slideIndex].classList.remove("active-slide");
