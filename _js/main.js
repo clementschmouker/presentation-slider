@@ -1,14 +1,14 @@
 var slides = document.querySelectorAll(".slide");
 var slideIndex = 0;
 
-slides.forEach(function(item, index)Â {
-	if(item != slides[slideIndex]) {
-		item.classList.add("next-slide");
+for (var i = 0; i < slides.length; i += 1) {
+	if(slides[i] != slides[slideIndex]) {
+		slides[i].classList.add("next-slide");
 	}
 	else {
-		item.classList.add("active-slide");
+		slides[i].classList.add("active-slide");
 	}
-})
+}
 
 document.addEventListener("keyup", function(e) {
 	if(e.keyCode == 40 && slideIndex < slides.length -1) {
