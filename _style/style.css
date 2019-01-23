@@ -1,0 +1,176 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	background: #010101;
+	color: white;
+}
+
+header, footer {
+	font-family: 'Roboto', sans-serif;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 10px;
+}
+footer {
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	text-align: right;
+	width: 100%;
+}
+
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+	font-size: 4em;
+	color: white;
+	/*letter-spacing: .18em;*/
+	text-transform: uppercase;
+}
+h1:after {
+	height: 3px;
+	width: 50%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	background: #2196F3;
+	content: "";
+	display: block;
+}
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 2em;
+	text-align: center;
+}
+img {
+	max-width: 100%;
+}
+
+.name {
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: 900;
+}
+.name span {
+	text-transform: none;
+	font-weight: 300;
+	font-size: 0.8em;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+
+	opacity: 0;
+
+	transition: all .3s ease-in-out;
+}
+.slide:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.slide:after {
+	transition: all .4s .4s ease-in-out;
+}
+.previous-slide {
+
+	transform: translateY(-100%);
+}
+.next-slide {
+	transform: translateY(100%);
+}
+.active-slide {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.previous-slide:after, .next-slide:after {
+	opacity: 0;
+}
+.active-slide:after {
+	opacity: 1;
+}
+
+.slide-content {
+	position: absolute;
+	width: 950px;
+	max-width: 950px;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.slide-content h1 {
+	text-align: center;
+}
+
+
+
+/* Slider Gauge */
+.counter {
+	position: fixed;
+	width: 100px;
+	left: 0;
+	top: 50%;
+	color: white;
+	transform:translateY(-50%);
+	font-family: 'Roboto', sans-serif;
+	/*background: red;*/
+	height: 50%;
+}
+.slideNumbers {
+	text-align:center;
+}
+.sliderGauge {
+	display: block;
+	height: 100%;
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	width: 2px;
+	background: #eee;
+}
+.sliderCurrentLevel {
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	display: block;
+	width: 2px;
+	background: #2196F3;
+
+	transition: all .2s ease-in-out;
+}
+
+
+/* slides Background */
+
+.slide:after {
+	display: block;
+	content: "";
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.trinus:after {
+	background: url("../_img/trinus (1).png") center center no-repeat;
+}
+.penguin:after {
+	background: url("../_img/penguin (1).jpg") no-repeat;
+	background-size: 100% 100%;
+}
