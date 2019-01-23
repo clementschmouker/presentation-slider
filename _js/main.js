@@ -11,14 +11,14 @@ for (var i = 0; i < slides.length; i += 1) {
 }
 
 document.addEventListener("keyup", function(e) {
-	if(e.keyCode == 40 && slideIndex < slides.length -1) {
+	if(e.key == "ArrowDown" && slideIndex < slides.length -1) {
 		slides[slideIndex].classList.add("previous-slide");
 		slides[slideIndex].classList.remove("active-slide");
 		slideIndex += 1;
 		slides[slideIndex].classList.add("active-slide");
 		slides[slideIndex].classList.remove("next-slide");
 	}
-	if(e.keyCode == 38 && slideIndex > 0) {
+	if(e.key == "ArrowUp" && slideIndex > 0) {
 		slides[slideIndex].classList.add("next-slide");
 		slides[slideIndex].classList.remove("active-slide");
 		slideIndex -= 1;
