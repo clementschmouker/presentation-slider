@@ -11,6 +11,7 @@ for (var i = 0; i < slides.length; i += 1) {
 }
 
 document.addEventListener("keyup", function(e) {
+  // Go to next slide
 	if(e.key == "ArrowDown" && slideIndex < slides.length -1) {
 		slides[slideIndex].classList.add("previous-slide");
 		slides[slideIndex].classList.remove("active-slide");
